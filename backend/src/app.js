@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Expense Tracker API is running 🚀');
+  res.send('Expense Tracker API is running, check for base endpoint. 🚀');
 });
 
 app.get('/health', (req, res) => {

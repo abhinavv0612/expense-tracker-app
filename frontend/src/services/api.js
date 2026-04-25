@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://expense-tracker-app-7cio.onrender.com";
 
 export const createExpense = async (data) => {
   const res = await fetch(`${BASE_URL}/expenses`, {
@@ -25,15 +25,15 @@ export const getExpenses = async (params = {}) => {
   }
 
   const url = queryParams.toString()
-    ? `http://localhost:5000/expenses?${queryParams.toString()}`
-    : `http://localhost:5000/expenses`;
+    ? `https://expense-tracker-app-7cio.onrender.com/expenses?${queryParams.toString()}`
+    : `https://expense-tracker-app-7cio.onrender.com/expenses`;
 
   const res = await fetch(url);
   return res.json();
 };
 
 export const deleteExpense = async (id) => {
-  const res = await fetch(`http://localhost:5000/expenses/${id}`, {
+  const res = await fetch(`https://expense-tracker-app-7cio.onrender.com/expenses/${id}`, {
     method: "DELETE",
   });
 
